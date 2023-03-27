@@ -1,0 +1,129 @@
+:root {
+    --font-primary: 'Outfit', sans-serif;
+    --background-color-main: rgb(213,225,239);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+  .attribution { font-size: 11px; text-align: center; }
+  .attribution a { color: hsl(228, 45%, 44%); }
+  body {
+    background-color: var(--background-color-main);
+    font-family: var(--font-primary);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 375px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #fff;
+      border-radius: 15px;
+      max-width: 320px;
+    }
+
+    .qr-code {
+      margin-top: 1rem;
+
+    }
+
+    .qr-code > img {
+      max-width: 290px;
+      max-height: 290px;
+      border-radius: 15px;
+    }
+
+    .qr-code-text {
+      text-align: center;
+      margin: 0 1rem;        
+    }  
+
+    .qr-code-text > h1 {
+      font-size: 20px;
+      color: #000;
+      margin: 1rem;
+    }
+
+    .qr-code-text > p {
+      font-size: 15px;
+      color: #999;
+      margin: 1rem;
+      padding-bottom: 20px;
+    }
+
+    /* clear fix */
+    .container::after, .qr-code::after, .qr-code-text::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    /* end clear fix */
+  }
+
+  @media screen and (max-width: 375px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #fff;
+      border-radius: 15px;
+      max-width: 320px;
+      flex-wrap: wrap;
+    }
+
+    .qr-code {
+      margin-top: 1rem;
+      max-width: min-content;
+      max-height: min-content;
+    }
+
+    .qr-code > img {
+      max-width: 290px;
+      max-height: 290px;
+      border-radius: 15px;
+    }
+
+    .qr-code-text {
+      text-align: center;
+      margin: 0 1rem;        
+    }  
+
+    .qr-code-text > h1 {
+      font-size: 20px;
+      color: #000;
+      margin: 1rem;
+    }
+
+    .qr-code-text > p {
+      font-size: 15px;
+      color: #999;
+      margin: 1rem;
+      padding-bottom: 20px;
+    }
+
+    /* clear fix */
+    .container::after, .qr-code::after, .qr-code-text::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    /* end clear fix */
+  }
+  
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+  }
+
